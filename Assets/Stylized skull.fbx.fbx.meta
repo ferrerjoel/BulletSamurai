@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: e143d3ac48bcaaa4a934263479fa82cb
+timeCreated: 1661472153
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Area
+    100002: Camera
+    100004: CUTTERS DOWN LEFT
+    100006: CUTTERS DOWN RIGHT
+    100008: CUTTERS UP  LEFT
+    100010: CUTTERS UP RIGHT
+    100012: FABGS UP LEFT
+    100014: FANGS DOWN LEFT
+    100016: FANGS DOWN RIGHT
+    100018: FANGS UP RIGHT
+    100020: JAW
+    100022: JAW_MeshPart0
+    100024: JAW_MeshPart1
+    100026: SKULL
+    100028: SKULL_MeshPart0
+    100030: SKULL_MeshPart1
+    100032: SKULL_MeshPart2
+    100034: SKULL_MeshPart3
+    100036: SKULL_MeshPart4
+    100038: SKULL_MeshPart5
+    100040: SKULL_MeshPart6
+    100042: SKULL_MeshPart7
+    100044: SKULL_MeshPart8
+    100046: //RootNode
+    100048: TEETH 1 UP  RIGHT
+    100050: TEETH 1 UP LEFT
+    100052: TEETH 4 DOWN LEFT
+    100054: TEETH 4 DOWN RIGHT
+    100056: TEETH 4 UP LEFT
+    100058: TEETH 4 UP RIGHT
+    100060: TEETH 5 DOWN LEFT
+    100062: TEETH 5 DOWN RIGHT
+    100064: TEETH 5 UP LEFT
+    100066: TEETH 5 UP RIGHT
+    100068: TEETH 6 DOWN LEFT
+    100070: TEETH 6 DOWN RIGHT
+    100072: TEETH 6 UP LEFT
+    100074: TEETH 6 UP RIGHT
+    100076: TEETH DOWN LEFT
+    100078: TEETH DOWN RIGHT
+    400000: Area
+    400002: Camera
+    400004: CUTTERS DOWN LEFT
+    400006: CUTTERS DOWN RIGHT
+    400008: CUTTERS UP  LEFT
+    400010: CUTTERS UP RIGHT
+    400012: FABGS UP LEFT
+    400014: FANGS DOWN LEFT
+    400016: FANGS DOWN RIGHT
+    400018: FANGS UP RIGHT
+    400020: JAW
+    400022: JAW_MeshPart0
+    400024: JAW_MeshPart1
+    400026: SKULL
+    400028: SKULL_MeshPart0
+    400030: SKULL_MeshPart1
+    400032: SKULL_MeshPart2
+    400034: SKULL_MeshPart3
+    400036: SKULL_MeshPart4
+    400038: SKULL_MeshPart5
+    400040: SKULL_MeshPart6
+    400042: SKULL_MeshPart7
+    400044: SKULL_MeshPart8
+    400046: //RootNode
+    400048: TEETH 1 UP  RIGHT
+    400050: TEETH 1 UP LEFT
+    400052: TEETH 4 DOWN LEFT
+    400054: TEETH 4 DOWN RIGHT
+    400056: TEETH 4 UP LEFT
+    400058: TEETH 4 UP RIGHT
+    400060: TEETH 5 DOWN LEFT
+    400062: TEETH 5 DOWN RIGHT
+    400064: TEETH 5 UP LEFT
+    400066: TEETH 5 UP RIGHT
+    400068: TEETH 6 DOWN LEFT
+    400070: TEETH 6 DOWN RIGHT
+    400072: TEETH 6 UP LEFT
+    400074: TEETH 6 UP RIGHT
+    400076: TEETH DOWN LEFT
+    400078: TEETH DOWN RIGHT
+    2000000: Camera
+    2300000: CUTTERS DOWN LEFT
+    2300002: CUTTERS DOWN RIGHT
+    2300004: CUTTERS UP  LEFT
+    2300006: CUTTERS UP RIGHT
+    2300008: FABGS UP LEFT
+    2300010: FANGS DOWN LEFT
+    2300012: FANGS DOWN RIGHT
+    2300014: FANGS UP RIGHT
+    2300016: JAW_MeshPart0
+    2300018: JAW_MeshPart1
+    2300020: SKULL_MeshPart0
+    2300022: SKULL_MeshPart1
+    2300024: SKULL_MeshPart2
+    2300026: SKULL_MeshPart3
+    2300028: SKULL_MeshPart4
+    2300030: SKULL_MeshPart5
+    2300032: SKULL_MeshPart6
+    2300034: SKULL_MeshPart7
+    2300036: SKULL_MeshPart8
+    2300038: TEETH 1 UP  RIGHT
+    2300040: TEETH 1 UP LEFT
+    2300042: TEETH 4 DOWN LEFT
+    2300044: TEETH 4 DOWN RIGHT
+    2300046: TEETH 4 UP LEFT
+    2300048: TEETH 4 UP RIGHT
+    2300050: TEETH 5 DOWN LEFT
+    2300052: TEETH 5 DOWN RIGHT
+    2300054: TEETH 5 UP LEFT
+    2300056: TEETH 5 UP RIGHT
+    2300058: TEETH 6 DOWN LEFT
+    2300060: TEETH 6 DOWN RIGHT
+    2300062: TEETH 6 UP LEFT
+    2300064: TEETH 6 UP RIGHT
+    2300066: TEETH DOWN LEFT
+    2300068: TEETH DOWN RIGHT
+    3300000: CUTTERS DOWN LEFT
+    3300002: CUTTERS DOWN RIGHT
+    3300004: CUTTERS UP  LEFT
+    3300006: CUTTERS UP RIGHT
+    3300008: FABGS UP LEFT
+    3300010: FANGS DOWN LEFT
+    3300012: FANGS DOWN RIGHT
+    3300014: FANGS UP RIGHT
+    3300016: JAW_MeshPart0
+    3300018: JAW_MeshPart1
+    3300020: SKULL_MeshPart0
+    3300022: SKULL_MeshPart1
+    3300024: SKULL_MeshPart2
+    3300026: SKULL_MeshPart3
+    3300028: SKULL_MeshPart4
+    3300030: SKULL_MeshPart5
+    3300032: SKULL_MeshPart6
+    3300034: SKULL_MeshPart7
+    3300036: SKULL_MeshPart8
+    3300038: TEETH 1 UP  RIGHT
+    3300040: TEETH 1 UP LEFT
+    3300042: TEETH 4 DOWN LEFT
+    3300044: TEETH 4 DOWN RIGHT
+    3300046: TEETH 4 UP LEFT
+    3300048: TEETH 4 UP RIGHT
+    3300050: TEETH 5 DOWN LEFT
+    3300052: TEETH 5 DOWN RIGHT
+    3300054: TEETH 5 UP LEFT
+    3300056: TEETH 5 UP RIGHT
+    3300058: TEETH 6 DOWN LEFT
+    3300060: TEETH 6 DOWN RIGHT
+    3300062: TEETH 6 UP LEFT
+    3300064: TEETH 6 UP RIGHT
+    3300066: TEETH DOWN LEFT
+    3300068: TEETH DOWN RIGHT
+    4300000: SKULL_MeshPart0
+    4300002: SKULL_MeshPart1
+    4300004: SKULL_MeshPart2
+    4300006: SKULL_MeshPart3
+    4300008: SKULL_MeshPart4
+    4300010: SKULL_MeshPart5
+    4300012: SKULL_MeshPart6
+    4300014: SKULL_MeshPart7
+    4300016: SKULL_MeshPart8
+    4300018: TEETH 1 UP LEFT
+    4300020: CUTTERS UP RIGHT
+    4300022: FANGS UP RIGHT
+    4300024: TEETH 4 UP RIGHT
+    4300026: TEETH 5 UP LEFT
+    4300028: TEETH 6 UP LEFT
+    4300030: JAW_MeshPart0
+    4300032: JAW_MeshPart1
+    4300034: TEETH DOWN LEFT
+    4300036: CUTTERS DOWN RIGHT
+    4300038: FANGS DOWN RIGHT
+    4300040: TEETH 4 DOWN LEFT
+    4300042: TEETH 5 DOWN LEFT
+    4300044: TEETH 6 DOWN LEFT
+    4300046: FABGS UP LEFT
+    4300048: FANGS DOWN LEFT
+    4300050: CUTTERS DOWN LEFT
+    4300052: TEETH 1 UP  RIGHT
+    4300054: CUTTERS UP  LEFT
+    4300056: TEETH DOWN RIGHT
+    4300058: TEETH 4 UP LEFT
+    4300060: TEETH 5 UP RIGHT
+    4300062: TEETH 6 UP RIGHT
+    4300064: TEETH 6 DOWN RIGHT
+    4300066: TEETH 4 DOWN RIGHT
+    4300068: TEETH 5 DOWN RIGHT
+    10800000: Area
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SKULL
+    second: {fileID: 2100000, guid: af77519eb0e9c294b9426e8f5e3ff1b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TEETH
+    second: {fileID: 2100000, guid: 0914f8dc4db4b614fb7e3752d2bd8969, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
