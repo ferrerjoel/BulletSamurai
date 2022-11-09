@@ -75,9 +75,7 @@ public class moubola : MonoBehaviour {
 			MoveSword me;
 			me=FindObjectOfType<MoveSword>();
 			me.vida=me.vida-5;
-		
-				
-
+			
 			//mou el fantasma una mica
 			Vector3 pos=transform.parent.position;
 			Vector3 posjugador=jugador.transform.parent.position;
