@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class mouespasa : MonoBehaviour {
+public class MoveSword : MonoBehaviour {
 	public float anterior;
 	private AudioSource source;
 	public AudioClip espasa;

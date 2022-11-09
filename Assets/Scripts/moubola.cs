@@ -72,8 +72,8 @@ public class moubola : MonoBehaviour {
 
 			//li treu vida
 			//creem una instancia de classe mouespasa
-			mouespasa me;
-			me=FindObjectOfType<mouespasa>();
+			MoveSword me;
+			me=FindObjectOfType<MoveSword>();
 			me.vida=me.vida-5;
 		
 				
