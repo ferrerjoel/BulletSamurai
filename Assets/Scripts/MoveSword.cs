@@ -9,7 +9,7 @@ public class MoveSword : MonoBehaviour {
 	public AudioClip espasa;
 	public AudioClip morir;
 	public float dist;
-	public Text texto;
+	public Text textUI;
 	public GameObject gameobjectJugador;
 	public int vida=100;
 	// Use this for initialization
@@ -32,12 +32,12 @@ public class MoveSword : MonoBehaviour {
 				float diferencia = dist-anterior;
 				anterior=dist;
 				
-				//texto.text= "ant:"+anterior.ToString("0.000")+"\n ";
-				//texto.text= texto.text+"ara:"+dist.ToString("0.000")+"\n ";
-				//texto.text= texto.text+"dif:"+diferencia.ToString("0.000")+"\n";
+				//textUI.text= "ant:"+anterior.ToString("0.000")+"\n ";
+				//textUI.text= textUI.text+"ara:"+dist.ToString("0.000")+"\n ";
+				//textUI.text= textUI.text+"dif:"+diferencia.ToString("0.000")+"\n";
 				if (diferencia>0.07f || diferencia<-0.07f)
 				{
-						//texto.text=texto.text +"SONA \n\n";
+						//textUI.text=textUI.text +"SONA \n\n";
 						//sona ferro al aire
 						if (!source.isPlaying)
 						{
@@ -54,7 +54,7 @@ public class MoveSword : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (vida>0) texto.text= "\n \n \n \n \n \n"+vida.ToString("0")+"\n ";
+		// if (vida>0) textUI.text= "\n \n \n \n \n \n"+vida.ToString("0")+"\n ";
 		if (vida==0f) {
 			
 			if (!source.isPlaying){
@@ -64,7 +64,7 @@ public class MoveSword : MonoBehaviour {
 						}
 			}
 		if (vida<0){
-			texto.text= "\n \n \n \n\n \nMORT! \n ";
+			textUI.text= "\n \n \n \n\n \nMORT! \n ";
 			Debug.Log("VIDA <0");
 			if (!source.isPlaying){
 						Debug.Log ("FINAL del tot");

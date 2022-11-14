@@ -151,7 +151,7 @@ public class Pvr_UnitySDKEyeManager : MonoBehaviour
 				Pvr_UnitySDKAPI.System.UPvr_StartVRModel ();
 				isfirst =false;
 			}else if(isfirst&&framenum<3){
-				Debug.Log("+++++++++++++++++++++++++++++++"+framenum);
+				//Debug.Log("+++++++++++++++++++++++++++++++"+framenum);
 				framenum++;
 			}
 
