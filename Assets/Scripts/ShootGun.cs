@@ -7,7 +7,8 @@ using Pvr_UnitySDKAPI;
 public class ShootGun : MonoBehaviour {
 	
 	public GameObject gun;
-	public ParticleSystem particles;
+	public ParticleSystem particlesShoot;
+	public GameObject impactEffect; 
 	public AudioSource shootSound;
 
 	public Text textUI;
@@ -27,7 +28,7 @@ public class ShootGun : MonoBehaviour {
 	void Shoot() 
 	{
 		textUI.text = "HOLA";
-		particles.Play();
+		particlesShoot.Play();
 		shootSound.Play();
 
 		RaycastHit hit;
@@ -40,6 +41,10 @@ public class ShootGun : MonoBehaviour {
 			{
 				enemy.takeHit();
 			}
+
+			GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+			Debug.Log("HOLA");
+			Destroy(impact, 2f);
 		}
 	}
 }
