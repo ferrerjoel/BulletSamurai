@@ -54,7 +54,7 @@ public class MoveSword : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// if (vida>0) textUI.text= "\n \n \n \n \n \n"+vida.ToString("0")+"\n ";
+		//if (vida>0) textUI.text= "\n \n \n \n \n \n"+vida.ToString("0")+"\n ";
 		if (vida==0f) {
 			
 			if (!source.isPlaying){
@@ -64,7 +64,7 @@ public class MoveSword : MonoBehaviour {
 						}
 			}
 		if (vida<0){
-			textUI.text= "\n \n \n \n\n \nMORT! \n ";
+			textUI.text= "\n \n \n \n\n \nGAME OVER! \n ";
 			Debug.Log("VIDA <0");
 			if (!source.isPlaying){
 						Debug.Log ("FINAL del tot");
