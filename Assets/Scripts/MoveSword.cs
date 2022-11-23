@@ -11,7 +11,7 @@ public class MoveSword : MonoBehaviour {
 	public float dist;
 	public Text textUI;
 	public GameObject gameobjectJugador;
-	public int vida=100;
+	
 	// Use this for initialization
 	void Start () {
 		//diferencia entre el vector de espasa i el de personatge
@@ -55,22 +55,7 @@ public class MoveSword : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//if (vida>0) textUI.text= "\n \n \n \n \n \n"+vida.ToString("0")+"\n ";
-		if (vida==0f) {
-			
-			if (!source.isPlaying){
-						Debug.Log ("musica morir");
-						source.clip=morir;
-						source.Play();
-						}
-			}
-		if (vida<0){
-			textUI.text= "\n \n \n \n\n \nGAME OVER! \n ";
-			Debug.Log("VIDA <0");
-			if (!source.isPlaying){
-						Debug.Log ("FINAL del tot");
-						Application.Quit();
-						}
-			}
+
 	}
 				
 		

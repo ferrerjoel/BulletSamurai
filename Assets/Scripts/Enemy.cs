@@ -1,7 +1,21 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
+
+	public Player playerScript;
+
+	public int minWaitSound;
+	public int maxWaitSound;
+
+	public AudioSource deathSound;
+	public AudioSource spiderSound;
+
+	public Animation spiderAnimations; 
+
+	// IA
 
 	public UnityEngine.AI.NavMeshAgent agent;
 
@@ -25,8 +39,9 @@ public class Enemy : MonoBehaviour {
 
 	private void Start()
 	{
-		player = GameObject.Find("jugador").transform;
+		player = playerScript.gameObject.transform;
 		agent = GetComponent<NavMeshAgent>();
+		StartCoroutine(enemySoundWait());
 	}
 
 	private void Update()
@@ -35,12 +50,23 @@ public class Enemy : MonoBehaviour {
 		playerIsInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
 		if (!playerIsInSight && !playerIsInAttackRange) Patroling();
-		if (playerIsInSight && !playerIsInAttackRange) ChasePlayer();
+		if (playerIsInSight && !playerIsInAttackRange)
+		{
+			ChasePlayer();
+			spiderAnimations.Play("run");
+		} 
 		if (playerIsInAttackRange && playerIsInSight) ChasePlayer();
 
 	}
 
-
+	private IEnumerator enemySoundWait()
+	{
+		while (true){
+			yield return new WaitForSeconds(Random.Range(minWaitSound, maxWaitSound+1));
+			spiderSound.Play();
+		}
+		
+	}
 
 	private void Patroling()
 	{
@@ -86,6 +112,13 @@ public class Enemy : MonoBehaviour {
 		if (other.CompareTag("Sword"))
 		{
 			Destroy(gameObject);
+		}
+
+		if (other.CompareTag("jugador"))
+		{
+
+			playerScript.LoseLife(5);
+
 		}
 	}
 }
