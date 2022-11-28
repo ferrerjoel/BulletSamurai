@@ -37,14 +37,14 @@ public class ShootGun : MonoBehaviour {
 		Debug.Log(bullets + " " + isReloading);
 		if (bullets > 0 && !isReloading)
 		{
-			textUI.text = "\n\n\n\n\n\n\nMISS";
+			//textUI.text = "\n\n\n\n\n\n\nMISS";
 			particlesShoot.Play();
 			shootSound.Play();
 
 			RaycastHit hit;
 			if (Physics.Raycast(gun.transform.position, gun.transform.forward, out hit))
 			{
-				textUI.text = "\n\n\n\n\n\n\n" + hit.transform.name;
+				//textUI.text = "\n\n\n\n\n\n\n" + hit.transform.name;
 				Enemy enemy = hit.transform.GetComponent<Enemy>();
 				if (enemy != null)
 				{

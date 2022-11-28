@@ -37,6 +37,10 @@ public class Enemy : MonoBehaviour {
 	public float sightRange, attackRange;
 	public bool playerIsInSight, playerIsInAttackRange;
 
+	private bool isAlive = true;
+
+	public byte hitAttack;
+
 	private void Start()
 	{
 		player = playerScript.gameObject.transform;
@@ -49,19 +53,19 @@ public class Enemy : MonoBehaviour {
 		playerIsInSight = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
 		playerIsInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-		if (!playerIsInSight && !playerIsInAttackRange) Patroling();
-		if (playerIsInSight && !playerIsInAttackRange)
+		if (!playerIsInSight && !playerIsInAttackRange && isAlive) Patroling();
+		if (playerIsInSight && !playerIsInAttackRange && isAlive)
 		{
 			ChasePlayer();
 			spiderAnimations.Play("run");
 		} 
-		if (playerIsInAttackRange && playerIsInSight) ChasePlayer();
+		if (playerIsInAttackRange && playerIsInSight && isAlive) ChasePlayer();
 
 	}
 
 	private IEnumerator enemySoundWait()
 	{
-		while (true){
+		while (isAlive){
 			yield return new WaitForSeconds(Random.Range(minWaitSound, maxWaitSound+1));
 			spiderSound.Play();
 		}
@@ -103,21 +107,30 @@ public class Enemy : MonoBehaviour {
 	// LEGACY CODE
 	public void takeHit()
 	{
+		isAlive = false;
+		deathSound.Play();
+		spiderAnimations.Play("death1");
+		StartCoroutine(removeSpider(15));
+	}
+
+	public IEnumerator removeSpider(int seconds)
+	{
+		yield return new WaitForSeconds(seconds);
 		Destroy(gameObject);
 	}
 
 	private void OnTriggerEnter(Collider other) {
 		Debug.Log ("COLLISION");
 
-		if (other.CompareTag("Sword"))
+		if (other.CompareTag("Sword") && isAlive)
 		{
-			Destroy(gameObject);
+			takeHit();
 		}
 
-		if (other.CompareTag("jugador"))
+		if (other.CompareTag("jugador") && isAlive)
 		{
 
-			playerScript.LoseLife(5);
+			playerScript.LoseLife(hitAttack);
 
 		}
 	}
