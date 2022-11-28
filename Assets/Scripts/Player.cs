@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     // Use this for lose
     void Start()
     {
-		userText.text = "\n\n\n\n\n\n\n\n" + life;
+		userText.text = "\n\n\n" + life;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     {
         if (life <= 0f)
         {
-			userText.text = "\n\n\n\n\n\n\n\nDED";
+			userText.text = "\n\n\nDED";
 			canTakeDamage = false;
 			deathSound.Play();
 			StartCoroutine(DeathCooldown(5));
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 			canTakeDamage = false;
 			life -= points;
 			hitSound.Play();
-			userText.text = "\n\n\n\n\n\n\n\n" + life;
+			userText.text = "\n\n\n" + life;
 			StartCoroutine(DamageCooldown());
 		}
 	}

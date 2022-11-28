@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour {
 
 	private void Start()
 	{
+		playerScript = GameObject.FindWithTag("jugador").GetComponent<Player>(); //TEST
 		player = playerScript.gameObject.transform;
 		agent = GetComponent<NavMeshAgent>();
 		StartCoroutine(enemySoundWait());
@@ -110,7 +111,7 @@ public class Enemy : MonoBehaviour {
 		isAlive = false;
 		deathSound.Play();
 		spiderAnimations.Play("death1");
-		StartCoroutine(removeSpider(15));
+		StartCoroutine(removeSpider(5));
 	}
 
 	public IEnumerator removeSpider(int seconds)
