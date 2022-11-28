@@ -18,7 +18,7 @@ public class MovePlayer : MonoBehaviour {
 	Rigidbody rb; 
 	float speed=5f;
 
-
+	public GameObject head;
 
  	private void OnCollisionEnter(Collision collision)
     {
@@ -89,7 +89,7 @@ public class MovePlayer : MonoBehaviour {
 				if(source.clip!=tocabola) source.Stop();
                 break;
             case TouchPadClick.ClickUp:
-				Vector3 forward = transform.TransformDirection (Vector3.forward);
+				Vector3 forward = head.transform.TransformDirection (Vector3.forward);
 				cc.SimpleMove(forward*spped);
                 //myTransform.Translate(new Vector3(0, 0, 1) * spped * Time.deltaTime);
 				if (!source.isPlaying)
@@ -99,7 +99,7 @@ public class MovePlayer : MonoBehaviour {
 				}
 				break;
             case TouchPadClick.ClickDown:
-				Vector3 back = transform.TransformDirection (Vector3.back);
+				Vector3 back = head.transform.TransformDirection (Vector3.back);
 				cc.SimpleMove(back*spped);
                 //myTransform.Translate(new Vector3(0, 0, -1) * spped* Time.deltaTime);
 				if (!source.isPlaying)
@@ -108,22 +108,22 @@ public class MovePlayer : MonoBehaviour {
        			source.Play();
 				}
                 break;
-            case TouchPadClick.ClickRight:
-                myTransform.Rotate(Vector3.up * velocidadRotac * Time.deltaTime);
-				if (!source.isPlaying)
-        		{
-				source.clip=gira;
-       			source.Play();
-				}
-                break;
-            case TouchPadClick.ClickLeft:
-                myTransform.Rotate(Vector3.down * velocidadRotac * Time.deltaTime);
-				if (!source.isPlaying)
-        		{
-				source.clip=gira;
-       			source.Play();
-				}
-                break;
+            // case TouchPadClick.ClickRight:
+            //     myTransform.Rotate(Vector3.up * velocidadRotac * Time.deltaTime);
+			// 	if (!source.isPlaying)
+        	// 	{
+			// 	source.clip=gira;
+       		// 	source.Play();
+			// 	}
+            //     break;
+            // case TouchPadClick.ClickLeft:
+            //     myTransform.Rotate(Vector3.down * velocidadRotac * Time.deltaTime);
+			// 	if (!source.isPlaying)
+        	// 	{
+			// 	source.clip=gira;
+       		// 	source.Play();
+			// 	}
+            //     break;
             default:
                 break;
         	}
