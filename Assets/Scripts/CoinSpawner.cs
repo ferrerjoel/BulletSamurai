@@ -10,7 +10,7 @@ public class CoinSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 5; i++) {
 			int r = Random.Range(0, spawnPositions.Count);
 			Instantiate(coin, spawnPositions[r].gameObject.transform.position, coin.transform.rotation);
 			spawnPositions.RemoveAt(r);
