@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+
+	private const byte COINS_TO_WIN = 3;
     public int life = 100;
 	private bool canTakeDamage = true;
 
@@ -12,7 +14,11 @@ public class Player : MonoBehaviour
 
 	public AudioSource hitSound;
 	public AudioSource deathSound;
+	public AudioSource winSound;
 
+	public bool hasWon;
+
+	private byte collectedCoins = 0;
 
     // Use this for lose
     void Start()
@@ -54,5 +60,29 @@ public class Player : MonoBehaviour
 	{
 		yield return new WaitForSeconds(seconds);
 		Application.Quit();
+	}
+
+	private void OnTriggerEnter(Collider other) {
+
+		if (other.CompareTag("Flag"))
+		{
+			collectedCoins++;
+
+			if (collectedCoins >= COINS_TO_WIN) {
+
+				hasWon = true;
+				
+				if (life <= 0) {
+					userText.text = "\n\n\n YOU HAVE WON! You have been lucky...";
+				} else {
+					userText.text = "\n\n\n YOU HAVE WON!";
+				}
+
+				StartCoroutine(DeathCooldown(10));
+				
+			}
+			
+			
+		}
 	}
 }

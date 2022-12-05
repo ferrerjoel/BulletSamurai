@@ -18,7 +18,7 @@ public class ShootGun : MonoBehaviour {
 	private const byte maxBullets = 6;
 
 	private byte bullets;
-	private bool isReloading;
+	public bool isReloading;
 
 	void Start () {
 		bullets = maxBullets;

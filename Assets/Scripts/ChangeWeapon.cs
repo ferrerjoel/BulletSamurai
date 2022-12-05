@@ -8,8 +8,10 @@ public class ChangeWeapon : MonoBehaviour {
 	public GameObject sword;
 	public GameObject pistol;
 	// Use this for initialization
+	public GameObject shootingPoint;
+	private ShootGun pistolScript;
 	void Start () {
-		
+		pistolScript = shootingPoint.GetComponent<ShootGun>();
 	}
 	
 	// Update is called once per frame
@@ -19,6 +21,7 @@ public class ChangeWeapon : MonoBehaviour {
 				sword.SetActive(false);
 				pistol.SetActive(true);
 			} else {
+				pistolScript.isReloading = false;
 				pistol.SetActive(false);
 				sword.SetActive(true);
 			}
