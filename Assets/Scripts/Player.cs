@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-	private const byte COINS_TO_WIN = 3;
+	private const byte COINS_TO_WIN = 5;
     public int life = 100;
 	private bool canTakeDamage = true;
 
@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
 			if (collectedCoins >= COINS_TO_WIN) {
 
 				hasWon = true;
+				winSound.Play();
 				
 				if (life <= 0) {
 					userText.text = "\n\n\n YOU HAVE WON! You have been lucky...";

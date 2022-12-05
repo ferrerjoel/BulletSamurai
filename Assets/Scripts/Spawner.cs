@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.childCount <= 2)
+		if (transform.childCount <= 1)
 		{
 			var instance = Instantiate(spider, gameObject.transform.position, Quaternion.identity);
 			instance.transform.parent = gameObject.transform;

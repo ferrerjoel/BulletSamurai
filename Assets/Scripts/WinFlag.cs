@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class WinFlag : MonoBehaviour {
 
-	public Player playerScript;
+	// public Player playerScript;
 	public ParticleSystem coinParticles;
+	public AudioSource coinSound;
 
 	private bool hasBeenGrabed;
 
 	// Use this for initialization
 	void Start () {
-		playerScript = GameObject.FindWithTag("jugador").GetComponent<Player>();
+		// playerScript = GameObject.FindWithTag("jugador").GetComponent<Player>();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +28,7 @@ public class WinFlag : MonoBehaviour {
 		{
 			hasBeenGrabed = true;
 			coinParticles.Play();
+			coinSound.Play();
 			gameObject.GetComponent<MeshRenderer>().enabled = false;
 			gameObject.GetComponent<SphereCollider>().enabled = false;
 			StartCoroutine(removeCoin());
