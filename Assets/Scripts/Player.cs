@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     // Use this for lose
     void Start()
     {
-		userText.text = "\n\n\n" + life;
+		userText.text = "\n\n\n\n\n\n\n\n" + life + " | Collected coins: " + collectedCoins + " / " + COINS_TO_WIN;
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     {
         if (life <= 0f)
         {
-			userText.text = "\n\n\nDED";
+			userText.text = "\n\n\n\n\n\n\n\nDED";
 			canTakeDamage = false;
 			deathSound.Play();
 			StartCoroutine(DeathCooldown(5));
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
 			canTakeDamage = false;
 			life -= points;
 			hitSound.Play();
-			userText.text = "\n\n\n" + life;
+			userText.text = "\n\n\n\n\n\n\n\n" + life + " | Collected coins: " + collectedCoins + " / " + COINS_TO_WIN;
 			StartCoroutine(DamageCooldown());
 		}
 	}
@@ -67,16 +67,16 @@ public class Player : MonoBehaviour
 		if (other.CompareTag("Flag"))
 		{
 			collectedCoins++;
-
+			userText.text = "\n\n\n\n\n\n\n\n" + life + " | Collected coins: " + collectedCoins + " / " + COINS_TO_WIN;
 			if (collectedCoins >= COINS_TO_WIN) {
 
 				hasWon = true;
 				winSound.Play();
 				
 				if (life <= 0) {
-					userText.text = "\n\n\n YOU HAVE WON! You have been lucky...";
+					userText.text = "\n\n\n\n\n\n\n\n YOU HAVE WON! You have been lucky...";
 				} else {
-					userText.text = "\n\n\n YOU HAVE WON!";
+					userText.text = "\n\n\n\n\n\n\n\n YOU HAVE WON!";
 				}
 
 				StartCoroutine(DeathCooldown(10));
