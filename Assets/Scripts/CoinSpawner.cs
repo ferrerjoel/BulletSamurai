@@ -10,7 +10,7 @@ public class CoinSpawner : MonoBehaviour {
 	private GameObject spider;
 
 	private const byte COINS_TO_SPAWN = 5;
-	private const byte SPIDERS_TO_SPAWN = 5; // On every coin position that is choosen
+	private const byte SPIDERS_TO_SPAWN = 8; // On every coin position that is choosen
 
 
 	// Use this for initialization
